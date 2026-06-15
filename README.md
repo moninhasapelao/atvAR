@@ -89,17 +89,19 @@ Exemplo Ilustrado:
 - Situação de Uso: Quando uma inserção ocorre na subárvore esquerda do filho esquerdo de um nó cujo \(FB\) ficou fora do limite (\(+2\)).
 
 - Antes:
+ ```text
       30
      /
     20
    /
  10
-  
+ ```
 - Depois:
+  ```text
       20
      /  \
    10   30
-
+   ```
 ---
 
 2. Rotação Simples à Esquerda

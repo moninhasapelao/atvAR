@@ -56,7 +56,7 @@ Após rotação simples à direita:
 
 ---
 
-## Árvore N-ária
+### Árvore N-ária
 
 - Conceito: Estrutura de dados hierárquica onde cada nó pode possuir de \(0\) até \(N\) filhos, quebrando a limitação de apenas dois ramos.
 
@@ -134,51 +134,64 @@ Objetivo
 ---
 
 
-3. Rotação Dupla
-Esquerda-Direita (LR)
+### Rotação Dupla
 
-Ocorre quando um nó é inserido na subárvore direita do filho esquerdo.
+#### Esquerda-Direita (LR) 
 
-Antes
+- Caso: Ocorre quando um nó é inserido na subárvore direita do filho esquerdo.
+
+- Processo: Uma rotação simples à esquerda no filho, seguida por uma rotação simples à direita no pai.
+
+- Antes:
+```text
       30
      /
    10
      \
      20
-Depois
+```   
+Depois:
+```text
       20
      /  \
    10   30
-
-Primeiro:
-
+```
+#### Primeiro: 
 Rotação à esquerda em 10
 
-Depois:
-
+#### Depois:
 Rotação à direita em 30
-Direita-Esquerda (RL)
 
+#### Direita-Esquerda (RL)
+
+- Caso: Ocorre quando um nó é inserido na subárvore esquerda do filho direito.
+
+- Processo: Uma rotação simples à esquerda no filho, seguida por uma rotação simples à direita no pai.
 Ocorre quando um nó é inserido na subárvore esquerda do filho direito.
 
-Antes
+Antes: 
+```text
  10
    \
    30
    /
  20
-Depois
+```
+Depois: 
+```text
       20
      /  \
    10   30
+```
 
-Primeiro:
-
+#### Primeiro:
 Rotação à direita em 30
 
-Depois:
-
+#### Depois:
 Rotação à esquerda em 10
+
+---
+
 4. Inversão (Espelhamento)
 Conceito
 

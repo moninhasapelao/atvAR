@@ -124,8 +124,8 @@ Objetivo
      30
 ```
 
-```text
 -Depois:
+```text
       20
      /  \
    10   30
@@ -150,7 +150,7 @@ Objetivo
      \
      20
 ```   
-Depois:
+- Depois:
 ```text
       20
      /  \
@@ -161,6 +161,8 @@ Rotação à esquerda em 10
 
 #### Depois:
 Rotação à direita em 30
+
+-
 
 #### Direita-Esquerda (RL)
 
@@ -192,24 +194,32 @@ Rotação à esquerda em 10
 
 ---
 
-4. Inversão (Espelhamento)
-Conceito
+### Inversão (Espelhamento)
 
-Consiste em trocar recursivamente todos os filhos esquerdos pelos direitos.
+Conceito: Algoritmo que troca recursivamente os filhos esquerdo e direito de cada nó da árvore.
 
-Aplicação
-Processamento de imagens.
-Algoritmos de árvores.
-Testes e validações de estruturas.
-Antes
+Aplicação: Processamento de imagens hierárquicas, manipulação de interfaces gráficas invertidas (RTL - Right to Left) ou testes de simetria de dados.Exemplo Antes e Depois
+
+Antes:
+```text
       A
      / \
     B   C
-Depois
+  /      \
+ E        D
+```
+Depois:
+```text
       A
      / \
     C   B
-Parte 3 – Aplicação Prática
+  /      \
+ D        E
+```
+---
+
+## Aplicação Prática
+
 Sistema de Banco de Dados
 
 A estrutura mais adequada é a Árvore Rubro-Negra.

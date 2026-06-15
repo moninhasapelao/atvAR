@@ -16,18 +16,22 @@
 
 Antes do balanceamento:
 
-      30
-     /
-    20
+```text
+    30
    /
-   10
-   
+  20
+ /
+10
+```
+
 Após rotação simples à direita:
 
-      20
-     /  \
-   10   30
- 
+```text
+    20
+   /  \
+ 10   30
+```
+
 ---
 
 ### Árvore Rubro-Negra

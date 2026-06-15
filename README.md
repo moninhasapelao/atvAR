@@ -7,10 +7,8 @@ Conceito
 
 A árvore AVL é uma Árvore Binária de Busca (BST) autobalanceada criada por Adelson-Velsky e Landis em 1962. Seu principal objetivo é manter a altura da árvore próxima do ideal, garantindo operações eficientes.
 
-Características
-Cada nó possui um fator de balanceamento.
-O fator de balanceamento é a diferença entre as alturas das subárvores esquerda e direita.
-O valor do fator deve ser:
+Características: Cada nó possui um fator de balanceamento ; O fator de balanceamento é a diferença entre as alturas das subárvores esquerda e direita; O valor do fator deve ser:
+
 -1
 0
 1

@@ -82,25 +82,25 @@ Exemplo Ilustrado:
 
 ## Operações em Árvores
 
-### Rotação Simples à Direita
+### Rotação Simples à Direita (LL)
 
 - Objetivo: Corrigir desbalanceamentos causados por excesso de nós à esquerda.
 
 - Situação de Uso: Quando uma inserção ocorre na subárvore esquerda do filho esquerdo de um nó cujo \(FB\) ficou fora do limite (\(+2\)).
 
 - Antes:
-  
- ```text
+
+```text
       30
      /
     20
    /
  10
- ```
+```
 
 - Depois:
-  
-  ```text
+
+```text
       20
      /  \
    10   30
@@ -108,25 +108,32 @@ Exemplo Ilustrado:
 
 ---
 
-2. Rotação Simples à Esquerda
+### Rotação Simples à Esquerda (RR)
+
+- Objetivo: Corrigir desbalanceamentos causados por excesso de nós à direita.
+
+- Situação Utilizada: Quando uma inserção ocorre na subárvore direita do filho direito de um nó cujo \(FB\) ficou fora do limite (\(-2\)).
 Objetivo
 
-Corrigir desbalanceamentos causados por excesso de nós à direita.
-
-Situação de Uso
-
-Caso Direita-Direita (RR).
-
-Antes
+- Antes:
+```text
  10
    \
    20
      \
      30
-Depois
+```
+
+```text
+-Depois:
       20
      /  \
    10   30
+```
+
+---
+
+
 3. Rotação Dupla
 Esquerda-Direita (LR)
 

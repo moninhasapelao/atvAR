@@ -15,6 +15,8 @@
 - Exemplo Ilustrado:
 
 Antes do balanceamento:
+
+
       30
      /
     20

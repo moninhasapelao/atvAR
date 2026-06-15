@@ -21,13 +21,12 @@ Antes do balanceamento:
     20
    /
  10
-
+ ---
 Após rotação simples à direita:
 
       20
      /  \
    10   30
-
 ---
 
 ### Árvore Rubro-Negra

@@ -14,7 +14,7 @@
 
 - Exemplo Ilustrado:
 
-- Antes do balanceamento:
+Antes do balanceamento:
 
 ```text
     30
@@ -44,7 +44,7 @@ Após rotação simples à direita:
 
 - Desvantagens: A busca pode ser ligeiramente mais lenta que na AVL, pois a árvore é menos simétrica (a altura máxima pode chegar a \(2 \log(n+1)\)). Implementação mais complexa.
 
-- Exemplo Ilustrado:
+Exemplo Ilustrado:
   
           20(P)
          /     \
@@ -88,7 +88,7 @@ Exemplo Ilustrado:
 
 - Situação de Uso: Quando uma inserção ocorre na subárvore esquerda do filho esquerdo de um nó cujo \(FB\) ficou fora do limite (\(+2\)).
 
-- Antes:
+Antes:
 
 ```text
       30
@@ -98,7 +98,7 @@ Exemplo Ilustrado:
  10
 ```
 
-- Depois:
+Depois:
 
 ```text
       20
@@ -115,7 +115,7 @@ Exemplo Ilustrado:
 - Situação Utilizada: Quando uma inserção ocorre na subárvore direita do filho direito de um nó cujo \(FB\) ficou fora do limite (\(-2\)).
 Objetivo
 
-- Antes:
+Antes:
 ```text
  10
    \
@@ -124,7 +124,7 @@ Objetivo
      30
 ```
 
--Depois:
+Depois:
 ```text
       20
      /  \
@@ -142,7 +142,7 @@ Objetivo
 
 - Processo: Uma rotação simples à esquerda no filho, seguida por uma rotação simples à direita no pai.
 
-- Antes:
+Antes:
 ```text
       30
      /
@@ -150,7 +150,7 @@ Objetivo
      \
      20
 ```   
-- Depois:
+Depois:
 ```text
       20
      /  \
@@ -222,11 +222,11 @@ Depois:
 
 ## Aplicação Prática
 
-Escolha: Banco de Dados Relacional de Alto DesempenhoA estrutura de dados mais adequada para gerenciar e indexar tabelas em um banco de dados comercial de grande porte é uma variação direta da Árvore N-ária, especificamente a Árvore B+.
+Escolha: Banco de Dados Relacional de Alto Desempenho: Estrutura de dados mais adequada para gerenciar e indexar tabelas em um banco de dados comercial de grande porte é uma variação direta da Árvore N-ária, especificamente a Árvore B+.
 
 Justificativa Técnica: 
-- Organização dos Dados e Hardware: Discos rígidos (HDs e SSDs) leem dados em blocos físicos grandes. Uma árvore binária (como AVL ou Rubro-Negra) armazena apenas uma chave por nó, exigindo que o sistema faça muitas leituras de disco sequenciais pulando de ponteiro em ponteiro. A árvore N-ária permite colocar centenas de chaves dentro de um único nó (onde \(N\) coincide perfeitamente com o tamanho do bloco do disco).
-- Desempenho Maciço em Leitura: Como cada nó possui múltiplos filhos, a árvore se torna extremamente "larga" e muito "baixa". Enquanto uma árvore binária com 1 milhão de registros pode ter uma altura de até 20 níveis, uma árvore N-ária balanceada (B+) precisa de apenas 3 ou 4 níveis. Isso significa encontrar qualquer registro realizando no máximo 4 acessos à memória secundária.
-- Eficiência nas Operações: As buscas pontuais operam em tempo garantido de \(O(\log n)\). Na variação B+, as folhas da árvore N-ária são interconectadas como uma lista ligada. Isso permite que buscas por intervalos (ex: buscar clientes que gastaram entre R$100 e R$500) leiam os dados linearmente de forma ultra veloz assim que o primeiro elemento é localizado.
+- Organização dos Dados e Hardware: Uma árvore binária armazena apenas uma chave por nó, exigindo que o sistema faça muitas leituras de disco sequenciais pulando de ponteiro em ponteiro. A árvore N-ária permite colocar centenas de chaves dentro de um único nó (onde \(N\) coincide perfeitamente com o tamanho do bloco do disco.
+- Desempenho: Como cada nó possui múltiplos filhos, a árvore se torna extremamente "larga" e muito "baixa". Enquanto uma árvore binária com 1 milhão de registros pode ter uma altura de até 20 níveis, uma árvore N-ária balanceada (B+) precisa de apenas 3 ou 4 níveis. Isso significa encontrar qualquer registro realizando no máximo 4 acessos à memória secundária.
+- Eficiência: As buscas pontuais operam em tempo garantido de (O(\log n)\). Na variação B+, as folhas da árvore N-ária são interconectadas como uma lista ligada. Isso permite que buscas por intervalos leiam os dados linearmente de forma ultra veloz assim que o primeiro elemento é localizado.
 
 ---

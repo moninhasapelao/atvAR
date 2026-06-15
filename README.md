@@ -1,8 +1,8 @@
 # Atividade Avaliativa 4 – Estruturas Avançadas de Árvores
 
-Parte 1 – Tipos de Árvores
+## Parte 1 – Tipos de Árvores
 
-1. Árvore AVL
+### 1. Árvore AVL
 
 Conceito: Árvore binária de busca (BST) autobalanceada onde a diferença de altura entre as subárvores esquerda e direita de qualquer nó é no máximo 1, criada por Adelson-Velsky e Landis em 1962. Seu principal objetivo é manter a altura da árvore próxima do ideal, garantindo operações eficientes.
 

@@ -2,28 +2,16 @@ Atividade Avaliativa 4 – Estruturas Avançadas de Árvores
 
 Parte 1 – Tipos de Árvores
 
-1. Árvore AVL 
-Conceito
+1. Árvore AVL
 
-A árvore AVL é uma Árvore Binária de Busca (BST) autobalanceada criada por Adelson-Velsky e Landis em 1962. Seu principal objetivo é manter a altura da árvore próxima do ideal, garantindo operações eficientes.
+Conceito: Árvore binária de busca (BST) autobalanceada onde a diferença de altura entre as subárvores esquerda e direita de qualquer nó é no máximo 1, criada por Adelson-Velsky e Landis em 1962. Seu principal objetivo é manter a altura da árvore próxima do ideal, garantindo operações eficientes.
 
-Características: Cada nó possui um fator de balanceamento ; O fator de balanceamento é a diferença entre as alturas das subárvores esquerda e direita; O valor do fator deve ser:
+Características: Cada nó possui um fator de balanceamento, esse fator de balanceamento é a diferença entre as alturas das subárvores esquerda e direita e o valor do fator deve ser: - 1, 0, 1.
 
--1
-0
-1
-Quando o balanceamento é violado, são realizadas rotações.
+Vantagens: Busca extremamente eficiente, altura sempre próxima de O(log n) e excelente para sistemas com muitas consultas.
 
-Vantagens
+Desvantagens: Operações de inserção e remoção são lentas devido ao custo de recalcular alturas e realizar rotações frequentes. 
 
-Busca extremamente eficiente. 
-Altura sempre próxima de O(log n).
-Excelente para sistemas com muitas consultas.
-
-Desvantagens
-
-Inserções e remoções mais complexas.
-Necessita realizar rotações para manter o equilíbrio.
 Exemplo Ilustrado
 
 Antes do balanceamento:
@@ -42,30 +30,14 @@ Após rotação simples à direita:
 
 2. Árvore Rubro-Negra
    
-Conceito
+Conceito: Árvore binária de busca autobalanceada que utiliza um bit extra de informação por nó para definir uma cor (vermelho ou preto).
 
-A árvore Rubro-Negra é uma BST balanceada que utiliza cores para controlar o crescimento da árvore.
+Regras de Coloração: Todo nó é vermelho ou preto. A raiz é sempre preta. Todas as folhas (nós nulos NIL) são pretas. Se um nó é vermelho, seus filhos devem ser pretos (não há vermelhos consecutivos). O caminho de qualquer nó até suas folhas contém o mesmo número de nós pretos. 
 
-Cada nó recebe uma das duas cores:
+Vantagens  Exige menos rotações para se rebalancear após inserções/remoções se comparada à AVL. Muito utilizada em bibliotecas e sistemas operacionais.
 
-Vermelho
-Preto
+Desvantagens: A busca pode ser ligeiramente mais lenta que na AVL, pois a árvore é menos simétrica (a altura máxima pode chegar a \(2 \log(n+1)\)). Implementação mais complexa.
 
-O balanceamento é mantido através de regras de coloração e rotações.
-
-Regras de Coloração
-Todo nó é vermelho ou preto.
-A raiz sempre é preta.
-Nós nulos são considerados pretos.
-Um nó vermelho não pode ter filho vermelho.
-Todos os caminhos da raiz até uma folha possuem a mesma quantidade de nós pretos.
-Vantagens
-Menos rotações que AVL.
-Inserção e remoção mais rápidas.
-Muito utilizada em bibliotecas e sistemas operacionais.
-Desvantagens
-Implementação mais complexa.
-Busca ligeiramente menos eficiente que AVL.
 Exemplo Ilustrado
           20(P)
          /     \

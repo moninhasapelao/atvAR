@@ -20,7 +20,7 @@ Antes do balanceamento:
      /
     20
    /
-   10
+10
    
 Após rotação simples à direita:
 

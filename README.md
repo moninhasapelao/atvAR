@@ -4,15 +4,15 @@
 
 ### Árvore AVL
 
-Conceito: Árvore binária de busca (BST) autobalanceada onde a diferença de altura entre as subárvores esquerda e direita de qualquer nó é no máximo 1, criada por Adelson-Velsky e Landis em 1962. Seu principal objetivo é manter a altura da árvore próxima do ideal, garantindo operações eficientes.
+- Conceito: Árvore binária de busca (BST) autobalanceada onde a diferença de altura entre as subárvores esquerda e direita de qualquer nó é no máximo 1, criada por Adelson-Velsky e Landis em 1962. Seu principal objetivo é manter a altura da árvore próxima do ideal, garantindo operações eficientes.
 
-Características: Cada nó possui um fator de balanceamento, esse fator de balanceamento é a diferença entre as alturas das subárvores esquerda e direita e o valor do fator deve ser: - 1, 0, 1.
+- Características: Cada nó possui um fator de balanceamento, esse fator de balanceamento é a diferença entre as alturas das subárvores esquerda e direita e o valor do fator deve ser: - 1, 0, 1.
 
-Vantagens: Busca extremamente eficiente, altura sempre próxima de O(log n) e excelente para sistemas com muitas consultas.
+- Vantagens: Busca extremamente eficiente, altura sempre próxima de O(log n) e excelente para sistemas com muitas consultas.
 
-Desvantagens: Operações de inserção e remoção são lentas devido ao custo de recalcular alturas e realizar rotações frequentes. 
+- Desvantagens: Operações de inserção e remoção são lentas devido ao custo de recalcular alturas e realizar rotações frequentes. 
 
-Exemplo Ilustrado
+- Exemplo Ilustrado
 
 Antes do balanceamento:
 

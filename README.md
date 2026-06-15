@@ -102,6 +102,7 @@ Exemplo Ilustrado:
      /  \
    10   30
 ```
+
 ---
 
 2. Rotação Simples à Esquerda

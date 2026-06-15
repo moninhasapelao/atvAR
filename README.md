@@ -16,13 +16,11 @@
 
 Antes do balanceamento:
 
-
-
       30
      /
     20
    /
-10
+   10
    
 Após rotação simples à direita:
 

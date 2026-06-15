@@ -12,7 +12,7 @@
 
 - Desvantagens: Operações de inserção e remoção são lentas devido ao custo de recalcular alturas e realizar rotações frequentes. 
 
-- Exemplo Ilustrado
+- Exemplo Ilustrado:
 
 Antes do balanceamento:
 
@@ -36,7 +36,7 @@ Após rotação simples à direita:
 
 - Regras de Coloração: Todo nó é vermelho ou preto. A raiz é sempre preta. Todas as folhas (nós nulos NIL) são pretas. Se um nó é vermelho, seus filhos devem ser pretos (não há vermelhos consecutivos). O caminho de qualquer nó até suas folhas contém o mesmo número de nós pretos. 
 
-- Vantagens  Exige menos rotações para se rebalancear após inserções/remoções se comparada à AVL. Muito utilizada em bibliotecas e sistemas operacionais.
+- Vantagens: Exige menos rotações para se rebalancear após inserções/remoções se comparada à AVL. Muito utilizada em bibliotecas e sistemas operacionais.
 
 - Desvantagens: A busca pode ser ligeiramente mais lenta que na AVL, pois a árvore é menos simétrica (a altura máxima pode chegar a \(2 \log(n+1)\)). Implementação mais complexa.
 
@@ -54,19 +54,20 @@ Após rotação simples à direita:
 
 ## Árvore N-ária
 
-Conceito: Estrutura de dados hierárquica onde cada nó pode possuir de \(0\) até \(N\) filhos, quebrando a limitação de apenas dois ramos.
+- Conceito: Estrutura de dados hierárquica onde cada nó pode possuir de \(0\) até \(N\) filhos, quebrando a limitação de apenas dois ramos.
 
-Diferenças das Árvores Binárias: Nós contêm uma coleção dinâmica (ou vetor fixo) de ponteiros para filhos, em vez de apenas ponteiros fixos para esquerda e direita.
+- Diferenças das Árvores Binárias: Nós contêm uma coleção dinâmica (ou vetor fixo) de ponteiros para filhos, em vez de apenas ponteiros fixos para esquerda e direita.
 
-Vantagens: Ideal para mapear dados com ramificações massivas, reduzindo a altura total da árvore drasticamente.
+- Vantagens: Ideal para mapear dados com ramificações massivas, reduzindo a altura total da árvore drasticamente.
 
-Desvantagens: Desperdício potencial de memória com ponteiros nulos se o fator de preenchimento dos nós for baixo
+- Desvantagens: Desperdício potencial de memória com ponteiros nulos se o fator de preenchimento dos nós for baixo
 
-Aplicações Práticas: Organização de diretórios de sistemas de arquivos, árvores de decisão em inteligência artificial e codificação de prefixos (Árvores Trie).
+- Aplicações Práticas: Organização de diretórios de sistemas de arquivos, árvores de decisão em inteligência artificial e codificação de prefixos (Árvores Trie).
 Conceito
 
 
-Exemplo Ilustrado
+Exemplo Ilustrado: 
+
            A
        /   |   \
       B    C    D
@@ -76,25 +77,27 @@ Exemplo Ilustrado
 ---
 
 ## Operações em Árvores
-1. Rotação Simples à Direita
-Objetivo
 
-Corrigir desbalanceamentos causados por excesso de nós à esquerda.
+### Rotação Simples à Direita
 
-Situação de Uso
+- Objetivo: Corrigir desbalanceamentos causados por excesso de nós à esquerda.
 
-Caso Esquerda-Esquerda (LL).
+- Situação de Uso: Quando uma inserção ocorre na subárvore esquerda do filho esquerdo de um nó cujo \(FB\) ficou fora do limite (\(+2\)).
 
-Antes
+- Antes:
       30
      /
     20
    /
  10
-Depois
+  
+- Depois:
       20
      /  \
    10   30
+
+---
+
 2. Rotação Simples à Esquerda
 Objetivo
 

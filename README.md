@@ -38,7 +38,7 @@ Após rotação simples à direita:
    
 - Conceito: Árvore binária de busca autobalanceada que utiliza um bit extra de informação por nó para definir uma cor (vermelho ou preto).
 
-- Regras de Coloração: Todo nó é vermelho ou preto. A raiz é sempre preta. Todas as folhas (nós nulos NIL) são pretas. Se um nó é vermelho, seus filhos devem ser pretos (não há vermelhos consecutivos). O caminho de qualquer nó até suas folhas contém o mesmo número de nós pretos. 
+- Regras de Coloração: Todo nó é vermelho ou preto, a raiz é sempre preta. Todas as folhas (nós nulos NIL) são pretas, se um nó é vermelho, seus filhos devem ser pretos (não há vermelhos consecutivos), o caminho de qualquer nó até suas folhas contém o mesmo número de nós pretos. 
 
 - Vantagens: Exige menos rotações para se rebalancear após inserções/remoções se comparada à AVL. Muito utilizada em bibliotecas e sistemas operacionais.
 
@@ -196,9 +196,11 @@ Rotação à esquerda em 10
 
 ### Inversão (Espelhamento)
 
-Conceito: Algoritmo que troca recursivamente os filhos esquerdo e direito de cada nó da árvore.
+- Conceito: Algoritmo que troca recursivamente os filhos esquerdo e direito de cada nó da árvore.
 
-Aplicação: Processamento de imagens hierárquicas, manipulação de interfaces gráficas invertidas (RTL - Right to Left) ou testes de simetria de dados.Exemplo Antes e Depois
+- Aplicação: Processamento de imagens hierárquicas, manipulação de interfaces gráficas invertidas (RTL - Right to Left) ou testes de simetria de dados. 
+
+- Exemplo Antes e Depois
 
 Antes:
 ```text
@@ -220,37 +222,11 @@ Depois:
 
 ## Aplicação Prática
 
-Sistema de Banco de Dados
+Escolha: Banco de Dados Relacional de Alto DesempenhoA estrutura de dados mais adequada para gerenciar e indexar tabelas em um banco de dados comercial de grande porte é uma variação direta da Árvore N-ária, especificamente a Árvore B+.
 
-A estrutura mais adequada é a Árvore Rubro-Negra.
+Justificativa Técnica: 
+- Organização dos Dados e Hardware: Discos rígidos (HDs e SSDs) leem dados em blocos físicos grandes. Uma árvore binária (como AVL ou Rubro-Negra) armazena apenas uma chave por nó, exigindo que o sistema faça muitas leituras de disco sequenciais pulando de ponteiro em ponteiro. A árvore N-ária permite colocar centenas de chaves dentro de um único nó (onde \(N\) coincide perfeitamente com o tamanho do bloco do disco).
+- Desempenho Maciço em Leitura: Como cada nó possui múltiplos filhos, a árvore se torna extremamente "larga" e muito "baixa". Enquanto uma árvore binária com 1 milhão de registros pode ter uma altura de até 20 níveis, uma árvore N-ária balanceada (B+) precisa de apenas 3 ou 4 níveis. Isso significa encontrar qualquer registro realizando no máximo 4 acessos à memória secundária.
+- Eficiência nas Operações: As buscas pontuais operam em tempo garantido de \(O(\log n)\). Na variação B+, as folhas da árvore N-ária são interconectadas como uma lista ligada. Isso permite que buscas por intervalos (ex: buscar clientes que gastaram entre R$100 e R$500) leiam os dados linearmente de forma ultra veloz assim que o primeiro elemento é localizado.
 
-Justificativa
-
-Bancos de dados realizam constantemente:
-
-Inserções
-Remoções
-Atualizações
-Buscas
-
-A árvore Rubro-Negra oferece:
-
-Busca em O(log n)
-Inserção em O(log n)
-Remoção em O(log n)
-Menor quantidade de rotações em comparação com AVL
-
-Por esse motivo, diversas bibliotecas de estruturas de dados utilizam árvores Rubro-Negras internamente.
-
-Exemplo
-
-Um índice de clientes poderia armazenar:
-
-Cliente ID
-|
-├── 1001
-├── 1002
-├── 1003
-└── ...
-
-A árvore mantém os registros organizados para acesso rápido.
+---

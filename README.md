@@ -89,6 +89,7 @@ Exemplo Ilustrado:
 - Situação de Uso: Quando uma inserção ocorre na subárvore esquerda do filho esquerdo de um nó cujo \(FB\) ficou fora do limite (\(+2\)).
 
 - Antes:
+  
  ```text
       30
      /
@@ -96,7 +97,9 @@ Exemplo Ilustrado:
    /
  10
  ```
+
 - Depois:
+  
   ```text
       20
      /  \

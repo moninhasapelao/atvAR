@@ -71,13 +71,13 @@ Conceito
 
 
 Exemplo Ilustrado: 
-
+```text
            A
        /   |   \
       B    C    D
     / | \
    E  F  G
-   
+ ```  
 ---
 
 ## Operações em Árvores

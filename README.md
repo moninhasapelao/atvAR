@@ -101,7 +101,7 @@ Exemplo Ilustrado:
       20
      /  \
    10   30
-   ```
+```
 ---
 
 2. Rotação Simples à Esquerda

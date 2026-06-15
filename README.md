@@ -10,7 +10,7 @@
 
 - Vantagens: Busca extremamente eficiente, altura sempre próxima de O(log n) e excelente para sistemas com muitas consultas.
 
-- Desvantagens: Operações de inserção e remoção são lentas devido ao custo de recalcular alturas e realizar rotações frequentes. 
+- # Desvantagens: Operações de inserção e remoção são lentas devido ao custo de recalcular alturas e realizar rotações frequentes. 
 
 - Exemplo Ilustrado
 

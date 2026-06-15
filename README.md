@@ -14,7 +14,7 @@
 
 - Exemplo Ilustrado:
 
-Antes do balanceamento:
+- Antes do balanceamento:
 
 ```text
     30

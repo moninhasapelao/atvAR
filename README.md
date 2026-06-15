@@ -2,7 +2,7 @@
 
 ## Parte 1 – Tipos de Árvores
 
-### 1. Árvore AVL
+### Árvore AVL
 
 Conceito: Árvore binária de busca (BST) autobalanceada onde a diferença de altura entre as subárvores esquerda e direita de qualquer nó é no máximo 1, criada por Adelson-Velsky e Landis em 1962. Seu principal objetivo é manter a altura da árvore próxima do ideal, garantindo operações eficientes.
 
@@ -28,7 +28,9 @@ Após rotação simples à direita:
      /  \
    10   30
 
-2. Árvore Rubro-Negra
+---
+
+### Árvore Rubro-Negra
    
 Conceito: Árvore binária de busca autobalanceada que utiliza um bit extra de informação por nó para definir uma cor (vermelho ou preto).
 
@@ -47,38 +49,32 @@ Exemplo Ilustrado
 
 (V) = Vermelho
 
-3. Árvore N-ária
+---
+
+## Árvore N-ária
+
+Conceito: Estrutura de dados hierárquica onde cada nó pode possuir de \(0\) até \(N\) filhos, quebrando a limitação de apenas dois ramos.
+
+Diferenças das Árvores Binárias: Nós contêm uma coleção dinâmica (ou vetor fixo) de ponteiros para filhos, em vez de apenas ponteiros fixos para esquerda e direita.
+
+Vantagens: Ideal para mapear dados com ramificações massivas, reduzindo a altura total da árvore drasticamente.
+
+Desvantagens: Desperdício potencial de memória com ponteiros nulos se o fator de preenchimento dos nós for baixo
+
+Aplicações Práticas: Organização de diretórios de sistemas de arquivos, árvores de decisão em inteligência artificial e codificação de prefixos (Árvores Trie).
 Conceito
 
-É uma árvore em que cada nó pode possuir até N filhos.
 
-Diferente das árvores binárias, não existe limitação de apenas dois filhos.
-
-Diferenças em Relação às Árvores Binárias
-Árvore Binária	Árvore N-ária
-Máximo 2 filhos	Máximo N filhos
-Estrutura simples	Estrutura mais flexível
-Muito usada em busca	Muito usada em hierarquias
-Vantagens
-Representa hierarquias naturalmente.
-Menor profundidade quando há muitos elementos.
-Facilita modelagem de estruturas reais.
-Desvantagens
-Implementação mais complexa.
-Operações podem exigir mais memória.
 Exemplo Ilustrado
            A
        /   |   \
       B    C    D
     / | \
    E  F  G
-Aplicações Práticas
-Sistemas de arquivos
-Menus de aplicativos
-Organogramas empresariais
-XML e HTML
-Taxonomias biológicas
-Parte 2 – Operações em Árvores
+   
+---
+
+## Operações em Árvores
 1. Rotação Simples à Direita
 Objetivo
 

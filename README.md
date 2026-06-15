@@ -10,7 +10,7 @@
 
 - Vantagens: Busca extremamente eficiente, altura sempre próxima de O(log n) e excelente para sistemas com muitas consultas.
 
-- # Desvantagens: Operações de inserção e remoção são lentas devido ao custo de recalcular alturas e realizar rotações frequentes. 
+- Desvantagens: Operações de inserção e remoção são lentas devido ao custo de recalcular alturas e realizar rotações frequentes. 
 
 - Exemplo Ilustrado
 
@@ -32,22 +32,23 @@ Após rotação simples à direita:
 
 ### Árvore Rubro-Negra
    
-Conceito: Árvore binária de busca autobalanceada que utiliza um bit extra de informação por nó para definir uma cor (vermelho ou preto).
+- Conceito: Árvore binária de busca autobalanceada que utiliza um bit extra de informação por nó para definir uma cor (vermelho ou preto).
 
-Regras de Coloração: Todo nó é vermelho ou preto. A raiz é sempre preta. Todas as folhas (nós nulos NIL) são pretas. Se um nó é vermelho, seus filhos devem ser pretos (não há vermelhos consecutivos). O caminho de qualquer nó até suas folhas contém o mesmo número de nós pretos. 
+- Regras de Coloração: Todo nó é vermelho ou preto. A raiz é sempre preta. Todas as folhas (nós nulos NIL) são pretas. Se um nó é vermelho, seus filhos devem ser pretos (não há vermelhos consecutivos). O caminho de qualquer nó até suas folhas contém o mesmo número de nós pretos. 
 
-Vantagens  Exige menos rotações para se rebalancear após inserções/remoções se comparada à AVL. Muito utilizada em bibliotecas e sistemas operacionais.
+- Vantagens  Exige menos rotações para se rebalancear após inserções/remoções se comparada à AVL. Muito utilizada em bibliotecas e sistemas operacionais.
 
-Desvantagens: A busca pode ser ligeiramente mais lenta que na AVL, pois a árvore é menos simétrica (a altura máxima pode chegar a \(2 \log(n+1)\)). Implementação mais complexa.
+- Desvantagens: A busca pode ser ligeiramente mais lenta que na AVL, pois a árvore é menos simétrica (a altura máxima pode chegar a \(2 \log(n+1)\)). Implementação mais complexa.
 
-Exemplo Ilustrado
+- Exemplo Ilustrado:
+  
           20(P)
          /     \
       10(V)   30(V)
 
-(P) = Preto
+#### (P) = Preto
 
-(V) = Vermelho
+#### (V) = Vermelho
 
 ---
 
